@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#ffffff">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>نظام كاشير متجر الحلويات الشامل - الإصدار المحدث والمدعم بالكامل</title>
@@ -2968,5 +2970,13 @@
             } catch(e) { console.error(e); }
         }
     </script>
+    <script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js");
+  });
+}
+</script>
+    
 </body>
 </html>
